@@ -163,3 +163,9 @@ treemap.c:98:7: error: unused variable ‘rightOrLeft’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 fafb32f
+Thu 14 Sep 2023 04:03:20 PM UTC: 
+ treemap.c | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+ tests:  13|5
+total_score: 25/70
+e311dce
