@@ -86,14 +86,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     {
       if(tree->current->right == NULL) return NULL;
       tree->current = tree->current->right;
-      comprobacion = is_equal(tree,tree->current->pair->key,key);
-      if(comprobacion == 1) tree->current = tree->current->right;
+      
     }else if(resultado == 0){
       if(tree->current->left == NULL) return NULL;
       tree->current = tree->current->left;
-      comprobacion = is_equal(tree,tree->current->pair->key,key);
-      if(comprobacion == 1) tree->current = tree->current->left;
     }
+
+    comprobacion = is_equal(tree,tree->current->pair->key,key);
   }
   
   return tree->current->pair;
