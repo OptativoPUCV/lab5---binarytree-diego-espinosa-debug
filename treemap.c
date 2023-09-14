@@ -98,7 +98,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
   Pair* temp = searchTreeMap(tree, key);
   if(temp != NULL) return;
-  int rightOrLeft = 1
+  int rightOrLeft = 1;
 
   tree->current = tree->root;
   TreeNode * busqueda =  tree->current;
