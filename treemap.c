@@ -73,7 +73,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
   int comprobacion = is_equal(tree,tree->root,key);
-  if(comprobacion == 0){
+  if(comprobacion == 1){
     tree->current = tree->root;
     return tree->root->pair;
   }else{
@@ -87,12 +87,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       if(tree->current->left == NULL) return NULL;
       tree->current = tree->current->left;
       comprobacion = is_equal(tree,tree->current,key);
-      if(comprobacion == 0) tree->current = tree->current->left;
+      if(comprobacion == 1) tree->current = tree->current->left;
     }else if(resultado == 0){
       if(tree->current->right == NULL) return NULL;
       tree->current = tree->current->right;
       comprobacion = is_equal(tree,tree->current,key);
-      if(comprobacion == 0) tree->current = tree->current->right;
+      if(comprobacion == 1) tree->current = tree->current->right;
     }
   }
   
