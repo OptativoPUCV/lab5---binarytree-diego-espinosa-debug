@@ -132,3 +132,13 @@ Thu 14 Sep 2023 06:11:47 AM UTC:
  tests:  11|6
 total_score: 15/70
 3c5d704
+Thu 14 Sep 2023 06:21:27 AM UTC: 
+ treemap.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:103:3: error: expected ‘,’ or ‘;’ before ‘tree’
+  103 |   tree->current = tree->root;
+      |   ^~~~
+Compilation failed
+f1c7cc9
