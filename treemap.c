@@ -94,6 +94,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       comprobacion = is_equal(tree,tree->current,key);
       if(comprobacion == 0) tree->current = tree->current->right;
     }
+    resultado =t ree->lower_than(tree->current,key);
   }
   
   return tree->current->pair;

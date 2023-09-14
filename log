@@ -52,3 +52,18 @@ Thu 14 Sep 2023 05:02:34 AM UTC:
  tests:  6|7
 total_score: 5/70
 418e827
+Thu 14 Sep 2023 05:04:27 AM UTC: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:97:16: error: ‘t’ undeclared (first use in this function)
+   97 |     resultado =t ree->lower_than(tree->current,key);
+      |                ^
+treemap.c:97:16: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:97:17: error: expected ‘;’ before ‘ree’
+   97 |     resultado =t ree->lower_than(tree->current,key);
+      |                 ^~~~
+      |                 ;
+Compilation failed
+f55b0d2
