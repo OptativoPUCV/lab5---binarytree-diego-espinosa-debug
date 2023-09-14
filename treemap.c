@@ -88,7 +88,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       tree->current = tree->current->left;
       comprobacion = is_equal(tree,tree->current,key);
       if(comprobacion == 0) tree->current = tree->current->left;
-    }else{
+    }else if(resultado == 0){
       if(tree->current->right == NULL) return NULL;
       tree->current = tree->current->right;
       comprobacion = is_equal(tree,tree->current,key);
