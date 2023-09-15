@@ -180,7 +180,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   if(searchTreeMap(tree, key) != NULL){
     return tree->current->pair;
   }else{
-    tree->current = tree->root:
+    tree->current = tree->root;
     TreeNode * ub_node = tree->current;
 
     while(tree->current != NULL){
