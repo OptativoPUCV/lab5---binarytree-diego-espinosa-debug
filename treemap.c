@@ -47,8 +47,12 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 
 TreeNode * minimum(TreeNode * x){
+  
+  while(x->left != NULL){
+    x = x->left;
+  }
 
-    return NULL;
+  return x;
 }
 
 
