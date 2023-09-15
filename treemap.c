@@ -179,8 +179,24 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 Pair * upperBound(TreeMap * tree, void* key) {
   if(searchTreeMap(tree, key) != NULL){
     return tree->current->pair;
+  }else{
+    tree->current = tree->root:
+    TreeNode * ub_node = tree->current;
+
+    while(tree->current != NULL){
+      if(tree->lower_than(tree->current->pair->key,key)){
+        ub_node = tree->current;
+        tree->current = tree->current->right;
+      }else{
+        ub_node = tree->current;
+        tree->current = tree->current->left;
+      }
+    }
+
+    if(tree->lower_than(ub_node->pair->key,key)) return NULL;
+
+    return ub_node->pair;
   }
-  return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
