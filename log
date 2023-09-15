@@ -236,3 +236,14 @@ treemap.c:95:25: error: expected ‘;’ before ‘:’ token
       |                         ;
 Compilation failed
 14f0b54
+Fri 15 Sep 2023 02:44:27 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:91:35: error: ‘TreeNode’ has no member named ‘rigth’; did you mean ‘right’?
+   91 |     TreeNode* min = minimum(node->rigth);
+      |                                   ^~~~~
+      |                                   right
+Compilation failed
+82c4f5d
