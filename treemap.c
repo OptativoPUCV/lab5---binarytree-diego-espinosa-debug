@@ -177,7 +177,10 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+  if(searchTreeMap(tree, key) != NULL){
+    return tree->current->pair;
+  }
+  return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
